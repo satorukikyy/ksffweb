@@ -1,29 +1,38 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Bricolage_Grotesque, Nanum_Pen_Script } from "next/font/google"
 
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { Providers } from "@/components/providers"
+import { us } from "@/lib/us"
+import { cn } from "@/lib/utils"
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-bricolage",
+  axes: ["opsz"],
 })
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+const pen = Nanum_Pen_Script({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-nanum-pen",
+})
+
+export const metadata: Metadata = {
+  title: `For ${us.you.name}`,
+  description: `A little place for ${us.you.name}, from ${us.me.name}. ${us.me.city} to ${us.you.city}, same clock.`,
+  robots: { index: false, follow: false },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#a6263b",
+}
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
-    >
+    <html lang="en" className={cn("antialiased", bricolage.variable, pen.variable)}>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

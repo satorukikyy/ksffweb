@@ -1,0 +1,37 @@
+"use client"
+
+import { MessageCircleHeartIcon } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { clock } from "@/lib/time"
+import { us } from "@/lib/us"
+import { useNow } from "@/lib/use-now"
+import { cn } from "@/lib/utils"
+
+// Opens WhatsApp with a prefilled note; Amanda can still edit it before sending.
+export function MessageKiky({
+  className,
+  variant,
+}: {
+  className?: string
+  variant?: React.ComponentProps<typeof Button>["variant"]
+}) {
+  const now = useNow()
+  const time = now ? ` It's ${clock(now, us.timeZone).text} ${us.timeZoneLabel} here in ${us.you.city}.` : ""
+  const text = `Hi ${us.me.name}, I'm thinking of you.${time}`
+  const href = `https://wa.me/${us.me.whatsapp}?text=${encodeURIComponent(text)}`
+
+  return (
+    <Button
+      asChild
+      size="lg"
+      variant={variant}
+      className={cn("h-12 rounded-full px-5 text-[0.95rem] font-semibold", className)}
+    >
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        <MessageCircleHeartIcon data-icon="inline-start" />
+        Text {us.me.name} on WhatsApp
+      </a>
+    </Button>
+  )
+}
