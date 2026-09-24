@@ -11,7 +11,7 @@ export default function OpengraphImage() {
   const km = kmBetween(us.me.coords, us.you.coords).toLocaleString("en-US")
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: "#a6263b", padding: 56 }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", background: "#a51c34", padding: 56 }}>
         <div
           style={{
             flex: 1,
@@ -41,7 +41,7 @@ export default function OpengraphImage() {
               <div style={{ fontSize: 118, fontWeight: 800, letterSpacing: -4, lineHeight: 1 }}>
                 {`For ${us.you.name}.`}
               </div>
-              <div style={{ fontSize: 40, color: "#f59a3a", marginTop: 18 }}>{`from ${us.me.name}, with love`}</div>
+              <div style={{ fontSize: 40, color: "#ff9a33", marginTop: 18 }}>{`from ${us.me.name}, with love`}</div>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { join } from "node:path"
 import Image from "next/image"
 
 import { HeartDoodle } from "@/components/doodles"
+import { DevelopOnView } from "@/components/in-view"
 import { SevenSeg } from "@/components/seven-seg"
 import { stamp, wibDate } from "@/lib/time"
 import { us } from "@/lib/us"
@@ -14,18 +15,25 @@ export const hasPhoto = (src: string) => existsSync(join(process.cwd(), "public"
 
 export function Roll() {
   return (
-    <ol className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+    // Phones: a sideways strip you swipe through. Wider screens: taped up in a grid.
+    <ol className="-mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pt-5 pb-8 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-14 sm:overflow-visible sm:p-0 lg:grid-cols-3">
       {us.photos.map((p, i) => (
-        <li key={p.src} className={cn("relative mx-auto w-full max-w-[20rem]", TILT[i % TILT.length])}>
+        <li
+          key={p.src}
+          className={cn(
+            "relative w-[74vw] max-w-[20rem] shrink-0 snap-center sm:mx-auto sm:w-full",
+            TILT[i % TILT.length]
+          )}
+        >
           <span className="tape absolute -top-3 left-1/2 z-10 h-6 w-24 -translate-x-1/2 rotate-[-4deg]" aria-hidden />
           <figure className="flex flex-col gap-3 rounded-[3px] bg-foreground p-2.5 pb-4 text-ink shadow-[var(--shadow-table)]">
-            <div className="photo relative aspect-[9/16] overflow-hidden rounded-[2px]">
+            <DevelopOnView className="photo aspect-[9/16] overflow-hidden rounded-[2px]">
               {hasPhoto(p.src) ? (
                 <Image
                   src={p.src}
                   alt={p.alt}
                   fill
-                  sizes="(min-width: 1024px) 20rem, (min-width: 640px) 45vw, 90vw"
+                  sizes="(min-width: 1024px) 20rem, (min-width: 640px) 45vw, 74vw"
                   className="object-cover"
                 />
               ) : (
@@ -42,7 +50,7 @@ export function Roll() {
                   className="stamp-glow absolute right-3 bottom-3 z-[3] h-4"
                 />
               )}
-            </div>
+            </DevelopOnView>
             <figcaption className="flex flex-col gap-0.5 px-1.5">
               <span className="font-pen text-[1.9rem] leading-none">{p.title}</span>
               <span className="text-sm text-ink-soft">{p.note}</span>

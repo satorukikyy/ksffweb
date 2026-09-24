@@ -5,6 +5,7 @@ import { ArrowDoodle, HeartDoodle, SquiggleDoodle } from "@/components/doodles"
 import { Letters } from "@/components/letters"
 import { MessageKiky } from "@/components/message-kiky"
 import { Reasons } from "@/components/reasons"
+import { StickyAfter } from "@/components/in-view"
 import { hasPhoto, Roll } from "@/components/roll"
 import { Strip } from "@/components/strip"
 import { Button } from "@/components/ui/button"
@@ -47,23 +48,24 @@ export default function Page() {
             </h1>
             <div className="flex flex-col gap-6 lg:pb-2">
               <p className={lede}>
-                Same clock, {roadKm} km of road apart. A small place for the days in between, all from me.
+                Same clock, {roadKm} km of road apart.
+                <span className="hidden sm:inline"> A small place for the days in between, all from me.</span>
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div id="hero-actions" className="flex flex-wrap gap-3">
                 <Button asChild size="lg" className="h-12 rounded-full px-5 text-[0.95rem] font-semibold">
                   <a href="#letters">
                     <MailIcon data-icon="inline-start" />
                     Open a letter
                   </a>
                 </Button>
-                <MessageKiky variant="secondary" className="hidden md:inline-flex" />
+                <MessageKiky variant="secondary" />
               </div>
             </div>
           </div>
           <div className="relative">
-            <p className="absolute -top-12 right-10 hidden items-start gap-2 font-pen text-2xl text-frame-soft lg:flex">
-              <ArrowDoodle className="mt-2 h-9 w-12 -scale-x-100 rotate-[35deg] text-frame-soft" />
-              it&apos;s live, by the way
+            <p className="absolute -top-11 left-[25%] hidden items-start gap-2 font-pen text-2xl text-frame-soft lg:flex">
+              <ArrowDoodle className="mt-3 h-9 w-12 -scale-x-100 rotate-[20deg] text-frame-soft" />
+              the clock is live, by the way
             </p>
             <Strip />
           </div>
@@ -78,7 +80,6 @@ export default function Page() {
               {roadKm} km by road, about {ROAD_HOURS} hours of driving: the ferry across the Sunda Strait, then up
               almost the whole of Sumatra. {straightKm} km in a straight line. Same clock the whole way.
             </p>
-            <p className="font-pen text-2xl text-frame-soft">tap a pin, or drag the map around</p>
           </div>
           <DistanceMap youPhoto={hasPhoto(us.avatar) ? us.avatar : undefined} />
         </section>
@@ -108,6 +109,10 @@ export default function Page() {
           <div className="flex max-w-2xl flex-col gap-4">
             <h2 className={h2}>Our roll.</h2>
             <p className={lede}>A few frames of you, taped up where I can see them every day.</p>
+            <p className="flex items-center gap-2 font-pen text-2xl text-frame-soft sm:hidden">
+              swipe
+              <ArrowDoodle className="h-7 w-10 -rotate-12 text-frame-soft" />
+            </p>
           </div>
           <Roll />
         </section>
@@ -118,16 +123,16 @@ export default function Page() {
           <div className="flex flex-col gap-4">
             <p className="font-pen text-[clamp(3.25rem,9vw,6rem)] leading-[0.85]">See you soon, {us.you.name}.</p>
             <p className="text-frame-soft">
-              — {us.me.name}, from {us.me.city}. Made for one person only.
+              Love, {us.me.name}, from {us.me.city}. Made for one person only.
             </p>
           </div>
           <MessageKiky className="hidden md:inline-flex" />
         </div>
       </footer>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 bg-gradient-to-t from-frame via-frame/90 to-transparent px-4 pt-6 pb-[max(1rem,env(safe-area-inset-bottom))] md:hidden">
+      <StickyAfter afterId="hero-actions">
         <MessageKiky className="w-full" />
-      </div>
+      </StickyAfter>
     </div>
   )
 }

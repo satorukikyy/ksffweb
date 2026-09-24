@@ -21,7 +21,7 @@ const BOUNDS = ROUTE.reduce(
 ) as LngLatBoundsLike
 
 // Canvas can't read CSS variables; these mirror --window, --window-2, --stamp.
-const MAP = { land: "#2b2527", water: "#151213", line: "#4a4144", label: "#a99fa1", stamp: "#f59a3a" }
+const MAP = { land: "#2b2524", water: "#151213", line: "#4a4144", label: "#a99fa1", stamp: "#ff9a33" }
 const HEART =
   "M20.5 32.5C14 27.6 4.3 21.2 3.6 12.8 3.1 7.2 7 3.4 11.6 3.6c3.9.2 6.7 3.1 8.6 6.7 1.8-3.9 4.9-6.9 9-6.8 4.8.1 8.1 4.2 7.4 9.6-1.1 8.4-9.6 14.4-16.1 19.4Z"
 
@@ -63,7 +63,7 @@ export function DistanceMap({ youPhoto }: { youPhoto?: string }) {
   // Room for the pin labels and the km readout in the bottom-left corner.
   const padding = () =>
     box.current && box.current.clientWidth < 640
-      ? { top: 56, bottom: 120, left: 72, right: 72 }
+      ? { top: 64, bottom: 120, left: 72, right: 72 }
       : { top: 60, bottom: 90, left: 150, right: 110 }
 
   const fly = useCallback((target: "route" | Place) => {
@@ -77,6 +77,7 @@ export function DistanceMap({ youPhoto }: { youPhoto?: string }) {
     const m = map.current
     if (!m) return
     cancelAnimationFrame(raf.current)
+    m.resize()
     const source = m.getSource<GeoJSONSource>("route")
     const heart = heartMarker.current?.getElement()
 
@@ -139,6 +140,9 @@ export function DistanceMap({ youPhoto }: { youPhoto?: string }) {
           map.current = m
 
           m.once("load", () => {
+            const attrib = el.querySelector(".maplibregl-ctrl-attrib")
+            attrib?.classList.remove("maplibregl-compact-show")
+            attrib?.removeAttribute("open")
             const paint = (id: string, prop: Parameters<typeof m.setPaintProperty>[1], value: string) => {
               if (m.getLayer(id)) m.setPaintProperty(id, prop, value)
             }
@@ -227,6 +231,9 @@ export function DistanceMap({ youPhoto }: { youPhoto?: string }) {
           <div className="absolute inset-0">
             <div ref={box} className="size-full" aria-label={`Map of the road from ${us.me.city} to ${us.you.city}`} />
           </div>
+          <p className="pointer-events-none absolute top-3 left-4 z-[3] font-pen text-2xl text-foreground/85 sm:top-4 sm:left-5">
+            tap a pin, drag me around
+          </p>
           {!ready && (
             <div className="absolute inset-0 z-[3] grid place-items-center p-6 text-center">
               {status === "error" ? (

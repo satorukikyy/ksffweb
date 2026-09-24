@@ -37,3 +37,6 @@ next-env.d.ts
 
 # copied from node_modules by postinstall
 /public/maplibre
+
+# review screenshots (contain private photos)
+/.impeccable/review

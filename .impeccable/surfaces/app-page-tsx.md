@@ -26,6 +26,10 @@ Signature interaction: the strip developing live on load (flash, then each frame
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
+## Deliberate calls
+- Amanda's photos in the roll stay in colour, not B&W windows: they are the real her, and the one place her colour shows. (Finish review 2026-09-25 flagged the material mismatch; kept on purpose.)
+- Photo dates are not set; the orange imprint only renders when the owner adds real dates.
+
 ## Open decisions
 - Next visit date: owner to supply. "Together" is deliberately infinity, not a day count (owner's call).
 - Road distance: 2,266 km from OSRM; owner saw ~2,400 on Google Maps. ROAD_KM in lib/route.ts is the knob.

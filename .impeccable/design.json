@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-24T16:54:49.298Z",
+  "title": "Design System: For Amanda",
+  "extensions": {
+    "colorMeta": {
+      "frame": {
+        "role": "primary",
+        "displayName": "Cherry Frame Paper",
+        "canonical": "oklch(0.47 0.17 18)",
+        "tonalRamp": [
+          "oklch(0.15 0.17 18)",
+          "oklch(0.26 0.17 18)",
+          "oklch(0.37 0.17 18)",
+          "oklch(0.48 0.17 18)",
+          "oklch(0.59 0.17 18)",
+          "oklch(0.7 0.17 18)",
+          "oklch(0.82 0.17 18)",
+          "oklch(0.95 0.17 18)"
+        ]
+      },
+      "frame-deep": {
+        "role": "primary",
+        "displayName": "Deep Frame",
+        "canonical": "oklch(0.36 0.13 18)",
+        "tonalRamp": [
+          "oklch(0.15 0.13 18)",
+          "oklch(0.26 0.13 18)",
+          "oklch(0.37 0.13 18)",
+          "oklch(0.48 0.13 18)",
+          "oklch(0.59 0.13 18)",
+          "oklch(0.7 0.13 18)",
+          "oklch(0.82 0.13 18)",
+          "oklch(0.95 0.13 18)"
+        ]
+      },
+      "frame-soft": {
+        "role": "primary",
+        "displayName": "Frame Blush",
+        "canonical": "oklch(0.91 0.045 15)",
+        "tonalRamp": [
+          "oklch(0.15 0.045 15)",
+          "oklch(0.26 0.045 15)",
+          "oklch(0.37 0.045 15)",
+          "oklch(0.48 0.045 15)",
+          "oklch(0.59 0.045 15)",
+          "oklch(0.7 0.045 15)",
+          "oklch(0.82 0.045 15)",
+          "oklch(0.95 0.045 15)"
+        ]
+      },
+      "stamp": {
+        "role": "secondary",
+        "displayName": "Date-Imprint Orange",
+        "canonical": "oklch(0.78 0.165 60)",
+        "tonalRamp": [
+          "oklch(0.15 0.165 60)",
+          "oklch(0.26 0.165 60)",
+          "oklch(0.37 0.165 60)",
+          "oklch(0.48 0.165 60)",
+          "oklch(0.59 0.165 60)",
+          "oklch(0.7 0.165 60)",
+          "oklch(0.82 0.165 60)",
+          "oklch(0.95 0.165 60)"
+        ]
+      },
+      "flash-white": {
+        "role": "neutral",
+        "displayName": "Flash White",
+        "canonical": "oklch(0.985 0.004 20)",
+        "tonalRamp": [
+          "oklch(0.15 0.004 20)",
+          "oklch(0.26 0.004 20)",
+          "oklch(0.37 0.004 20)",
+          "oklch(0.48 0.004 20)",
+          "oklch(0.59 0.004 20)",
+          "oklch(0.7 0.004 20)",
+          "oklch(0.82 0.004 20)",
+          "oklch(0.95 0.004 20)"
+        ]
+      },
+      "window": {
+        "role": "neutral",
+        "displayName": "Photo Charcoal",
+        "canonical": "oklch(0.2 0.008 20)",
+        "tonalRamp": [
+          "oklch(0.15 0.008 20)",
+          "oklch(0.26 0.008 20)",
+          "oklch(0.37 0.008 20)",
+          "oklch(0.48 0.008 20)",
+          "oklch(0.59 0.008 20)",
+          "oklch(0.7 0.008 20)",
+          "oklch(0.82 0.008 20)",
+          "oklch(0.95 0.008 20)"
+        ]
+      },
+      "window-2": {
+        "role": "neutral",
+        "displayName": "Lifted Charcoal",
+        "canonical": "oklch(0.27 0.01 20)",
+        "tonalRamp": [
+          "oklch(0.15 0.01 20)",
+          "oklch(0.26 0.01 20)",
+          "oklch(0.37 0.01 20)",
+          "oklch(0.48 0.01 20)",
+          "oklch(0.59 0.01 20)",
+          "oklch(0.7 0.01 20)",
+          "oklch(0.82 0.01 20)",
+          "oklch(0.95 0.01 20)"
+        ]
+      },
+      "window-muted": {
+        "role": "neutral",
+        "displayName": "Silver Caption",
+        "canonical": "oklch(0.76 0.012 20)",
+        "tonalRamp": [
+          "oklch(0.15 0.012 20)",
+          "oklch(0.26 0.012 20)",
+          "oklch(0.37 0.012 20)",
+          "oklch(0.48 0.012 20)",
+          "oklch(0.59 0.012 20)",
+          "oklch(0.7 0.012 20)",
+          "oklch(0.82 0.012 20)",
+          "oklch(0.95 0.012 20)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Photo Paper",
+        "canonical": "oklch(0.975 0.003 250)",
+        "tonalRamp": [
+          "oklch(0.15 0.003 250)",
+          "oklch(0.26 0.003 250)",
+          "oklch(0.37 0.003 250)",
+          "oklch(0.48 0.003 250)",
+          "oklch(0.59 0.003 250)",
+          "oklch(0.7 0.003 250)",
+          "oklch(0.82 0.003 250)",
+          "oklch(0.95 0.003 250)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(0.24 0.012 20)",
+        "tonalRamp": [
+          "oklch(0.15 0.012 20)",
+          "oklch(0.26 0.012 20)",
+          "oklch(0.37 0.012 20)",
+          "oklch(0.48 0.012 20)",
+          "oklch(0.59 0.012 20)",
+          "oklch(0.7 0.012 20)",
+          "oklch(0.82 0.012 20)",
+          "oklch(0.95 0.012 20)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "oklch(0.44 0.012 20)",
+        "tonalRamp": [
+          "oklch(0.15 0.012 20)",
+          "oklch(0.26 0.012 20)",
+          "oklch(0.37 0.012 20)",
+          "oklch(0.48 0.012 20)",
+          "oklch(0.59 0.012 20)",
+          "oklch(0.7 0.012 20)",
+          "oklch(0.82 0.012 20)",
+          "oklch(0.95 0.012 20)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Reason line inside the photo window."
+      },
+      "body-lede": {
+        "displayName": "Lede",
+        "purpose": "One or two sentences under each heading, frame-soft on red, max 40ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Frame captions; letters use 1.05rem."
+      },
+      "label-unit": {
+        "displayName": "Unit label",
+        "purpose": "Uppercase unit beside a SevenSeg readout, and the opened stamp."
+      },
+      "pen-display": {
+        "displayName": "Pen display",
+        "purpose": "Footer sign-off."
+      },
+      "pen": {
+        "displayName": "Pen",
+        "purpose": "Captions, letter and photo titles, hints."
+      }
+    },
+    "shadows": [
+      {
+        "name": "table",
+        "value": "0 22px 40px -18px oklch(0.2 0.1 18 / 0.7), 0 3px 8px oklch(0.2 0.1 18 / 0.35)",
+        "purpose": "Every print, sleeve, strip and map frame resting on the red (--shadow-table)."
+      },
+      {
+        "name": "held-paper",
+        "value": "0 30px 80px -20px oklch(0.1 0.05 18 / 0.7)",
+        "purpose": "Open letter dialog."
+      },
+      {
+        "name": "tape",
+        "value": "0 1px 2px oklch(0.2 0.1 18 / 0.2)",
+        "purpose": "Tape strips on the roll."
+      },
+      {
+        "name": "stamp-glow",
+        "value": "drop-shadow(0 0 5px oklch(0.78 0.165 60 / 0.55))",
+        "purpose": "Filter on seven-segment digits over charcoal."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-develop",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Develop, flash and blur-resolve transitions."
+      },
+      {
+        "name": "develop",
+        "value": "1.3s image resolve + 1.1s white flash, stagger 280ms, delay 200ms",
+        "purpose": "Photo strip frames on load."
+      },
+      {
+        "name": "reason-resolve",
+        "value": "flash 0.7s, text blur(8px) to 0 in 0.4s",
+        "purpose": "Reason change."
+      },
+      {
+        "name": "letter-spring",
+        "value": "spring visualDuration 0.5 bounce 0.18, from y 28 rotate -1.5",
+        "purpose": "Letter paper entrance (Motion)."
+      },
+      {
+        "name": "sleeve-lift",
+        "value": "300ms ease-out translateY(-6px) rotate(0); peek 500ms translateY(-12px)",
+        "purpose": "Letter sleeve hover and focus."
+      },
+      {
+        "name": "map-draw",
+        "value": "fitBounds 2600ms curve 1.6, then route drawn with ease-in-out-cubic and km counter",
+        "purpose": "Map signature."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Flash Pill",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The only filled action.",
+      "html": "<button class=\"ds-btn-primary\">Text Kiky on WhatsApp</button>",
+      "css": ".ds-btn-primary{background:var(--primary);color:var(--primary-foreground);height:48px;padding:0 20px;border:0;border-radius:9999px;font:600 0.95rem/1 var(--font-bricolage),sans-serif;transition:background .15s,transform .15s}.ds-btn-primary:hover{background:color-mix(in oklch,var(--primary) 80%,transparent)}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid currentColor;outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Pill",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Repeat of the primary action already in view.",
+      "html": "<button class=\"ds-btn-secondary\">Text Kiky on WhatsApp</button>",
+      "css": ".ds-btn-secondary{background:var(--frame-deep);color:oklch(0.985 0.004 20);height:48px;padding:0 20px;border:0;border-radius:9999px;font:600 0.95rem/1 var(--font-bricolage),sans-serif}.ds-btn-secondary:hover{background:color-mix(in oklch,var(--frame-deep),oklch(0.985 0.004 20) 5%)}.ds-btn-secondary:focus-visible{outline:2px solid currentColor;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Pill",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tertiary actions.",
+      "html": "<button class=\"ds-btn-ghost\">Drive it again</button>",
+      "css": ".ds-btn-ghost{background:transparent;color:oklch(0.985 0.004 20);height:44px;padding:0 16px;border:0;border-radius:9999px;font:500 0.875rem/1 var(--font-bricolage),sans-serif}.ds-btn-ghost:hover{background:var(--window-2)}.ds-btn-ghost:focus-visible{outline:2px solid currentColor;outline-offset:3px}"
+    },
+    {
+      "name": "Print Frame with Photo Window",
+      "kind": "card",
+      "refersTo": "print-frame",
+      "description": "Container for every fact: white print border, charcoal grain window, pen caption, seven-seg value (digits here are a panel approximation; real builds use the SevenSeg component).",
+      "html": "<figure class=\"ds-print\"><div class=\"ds-window\"><span class=\"ds-pen\">between us</span><div><span class=\"ds-digits\">2266</span> <span class=\"ds-unit\">km</span><p class=\"ds-cap\">Depok to Bireuen by road.</p></div></div></figure>",
+      "css": ".ds-print{margin:0;max-width:22rem;padding:10px;background:oklch(0.985 0.004 20);border-radius:3px;box-shadow:var(--shadow-table);transform:rotate(0.8deg)}.ds-window{aspect-ratio:3/2;display:flex;flex-direction:column;justify-content:space-between;padding:16px;border-radius:2px;background:radial-gradient(120% 90% at 30% 20%,var(--window-2),var(--window) 70%);color:oklch(0.97 0.004 20)}.ds-pen{font:400 1.65rem/1 var(--font-nanum-pen),cursive}.ds-digits{color:var(--stamp);font:700 3rem/1 monospace;font-style:italic;filter:drop-shadow(0 0 5px oklch(0.78 0.165 60 / 0.55))}.ds-unit{font:600 .75rem var(--font-bricolage),sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--window-muted)}.ds-cap{margin:4px 0 0;font:500 .875rem/1.375 var(--font-bricolage),sans-serif}"
+    },
+    {
+      "name": "Letter Sleeve",
+      "kind": "custom",
+      "refersTo": "letter-sleeve",
+      "description": "Glassine button holding a sealed letter; lifts and straightens on hover.",
+      "html": "<button class=\"ds-sleeve\"><span class=\"ds-peek\">If you are reading this at 2am...</span><span class=\"ds-seal\"></span><span class=\"ds-when\">you can&#39;t sleep</span></button>",
+      "css": ".ds-sleeve{position:relative;width:14rem;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;border:0;border-radius:3px;overflow:hidden;text-align:left;color:var(--ink);background:linear-gradient(170deg,oklch(1 0 0 / .6),oklch(1 0 0 / .46) 55%,oklch(1 0 0 / .56)),var(--frame);box-shadow:var(--shadow-table);transform:rotate(-2deg);transition:transform .3s ease-out}.ds-sleeve:hover,.ds-sleeve:focus-visible{transform:translateY(-6px) rotate(0)}.ds-sleeve:focus-visible{outline:2px solid currentColor;outline-offset:3px}.ds-peek{position:absolute;inset:14% 12% auto;height:36%;padding:12px;border-radius:2px;background:color-mix(in oklch,var(--paper) 55%,transparent);color:color-mix(in oklch,var(--ink) 60%,transparent);font-size:.7rem;filter:blur(1.2px);transition:transform .5s ease-out}.ds-sleeve:hover .ds-peek{transform:translateY(-12px)}.ds-seal{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;background:var(--frame)}.ds-when{position:relative;font:400 1.75rem/.95 var(--font-nanum-pen),cursive}"
+    },
+    {
+      "name": "Taped Print",
+      "kind": "card",
+      "refersTo": "print-frame",
+      "description": "Roll photo: print with tape across the top edge.",
+      "html": "<figure class=\"ds-taped\"><span class=\"ds-tape\"></span><div class=\"ds-photo\"></div><figcaption><span class=\"ds-title\">first date</span><span class=\"ds-note\">Depok, raining.</span></figcaption></figure>",
+      "css": ".ds-taped{position:relative;margin:0;width:14rem;padding:10px 10px 16px;background:oklch(0.985 0.004 20);color:var(--ink);border-radius:3px;box-shadow:var(--shadow-table);transform:rotate(-1.5deg);display:flex;flex-direction:column;gap:12px}.ds-tape{position:absolute;top:-12px;left:50%;width:96px;height:24px;transform:translateX(-50%) rotate(-4deg);background:oklch(0.95 0.03 80 / .55);box-shadow:0 1px 2px oklch(0.2 0.1 18 / .2)}.ds-photo{aspect-ratio:9/16;border-radius:2px;background:radial-gradient(120% 90% at 30% 20%,var(--window-2),var(--window) 70%)}.ds-taped figcaption{display:flex;flex-direction:column;gap:2px;padding:0 6px}.ds-title{font:400 1.9rem/1 var(--font-nanum-pen),cursive}.ds-note{font-size:.875rem;color:var(--ink-soft)}"
+    },
+    {
+      "name": "Letter Paper",
+      "kind": "card",
+      "refersTo": "letter-paper",
+      "description": "Open letter on photo paper with the on-paper token flip.",
+      "html": "<article class=\"ds-paper\"><h3 class=\"ds-ptitle\">you can&#39;t sleep</h3><p>Hi. Put the phone down in a minute.</p><p class=\"ds-sign\">Kiky</p><button class=\"ds-paper-btn\">Next letter</button></article>",
+      "css": ".ds-paper{max-width:32rem;padding:24px;background:var(--paper);color:var(--ink);border-radius:3px;box-shadow:0 30px 80px -20px oklch(0.1 0.05 18 / .7);font:400 1.05rem/1.625 var(--font-bricolage),sans-serif}.ds-ptitle{margin:0 0 16px;font:400 2.6rem/.9 var(--font-nanum-pen),cursive}.ds-sign{font:400 2.25rem/1 var(--font-nanum-pen),cursive;color:var(--frame)}.ds-paper-btn{height:40px;padding:0 20px;border:0;border-radius:9999px;background:var(--ink);color:var(--paper);font:500 .875rem var(--font-bricolage),sans-serif}.ds-paper-btn:hover{background:color-mix(in oklch,var(--ink) 80%,transparent)}.ds-paper-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Photobox Strip",
+    "overview": "The site is a Life4Cuts-style booth print lying on a cherry table. The ground is drenched frame-paper red; everything that holds content is either a white print border around charcoal B&W photo windows, a glassine sleeve, or cool printed paper. Numbers are never typeset: every time, date, distance and count is an orange seven-segment date imprint, the way a film camera burns the date into the corner of a frame. Handwriting comes from the kiosk pen: white hand-drawn doodles and Nanum Pen Script notes.\n\nIt is read on a phone at the edges of the day, so the page is one column of physical objects, slightly tilted, each casting the same table shadow. Motion is photographic: frames develop from a white flash, reasons resolve out of blur, the map draws the real road. Nothing floats, sparkles or pulses for decoration.",
+    "keyCharacteristics": [
+      "Drenched cherry red ground; charcoal photo windows with film grain; orange date-imprint digits with a faint glow.",
+      "Two faces only: Bricolage Grotesque (booth logo, headings, UI) and Nanum Pen Script (the pen).",
+      "Flash-white pills are the only filled action.",
+      "Objects sit at small tilts (0.5deg to 2deg) and share one table shadow.",
+      "Tokens flip to ink-on-paper wherever content is printed."
+    ],
+    "rules": [
+      {
+        "name": "The Imprint Rule",
+        "body": "Every number (time, date, km, count, day) renders through the SevenSeg component in stamp orange; never set digits in Bricolage for display. Only digits, `-`, `:`, `.`, space and the infinity glyph are supported.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Flip Rule",
+        "body": "Any surface printed on paper takes the `.on-paper` token flip (foreground and primary become ink, primary-foreground becomes paper), so shared components invert without new variants.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mirror Rule",
+        "body": "The map canvas cannot read CSS variables, so components/distance-map.tsx mirrors window, window-2 and stamp as hex. Change a token, change the mirror.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pen Speaks Rule",
+        "body": "Nanum Pen Script is for what Kiky would write by hand on the print: captions, titles of letters and photos, hints, sign-offs. It never carries body copy, buttons or numbers.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Table Rule",
+        "body": "Everything resting on the red uses the table shadow; do not invent new elevations for new objects. Lift is expressed by tilt returning to 0 and a 6px rise on hover or focus.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do render every number through SevenSeg in stamp orange with the stamp glow on charcoal.",
+      "Do put new content inside a print frame, sleeve or paper sheet with the table shadow and a small tilt.",
+      "Do keep one flash-white pill per action cluster; demote repeats to secondary or ghost.",
+      "Do use the pen for captions, titles and sign-offs and Bricolage for everything else.",
+      "Do respect reduced motion: MotionConfig reducedMotion=\"user\" for Motion, a media query for CSS keyframes, matchMedia before running the map draw.",
+      "Do update the hex mirror in distance-map.tsx when window, window-2 or stamp change."
+    ],
+    "donts": [
+      "Don't use a pink or pastel ground; blush exists only as text on red.",
+      "Don't animate hearts or scatter them as particles; the heart is a static pen doodle placed once per object.",
+      "Don't use gradient text, or backdrop-filter glass on any surface. Blur is optical only: the glassine peek and the develop and resolve transitions.",
+      "Don't set display numbers in a text face or add a monospace font.",
+      "Don't use lucide icons outside buttons, or emoji and glyphs as icons; draw a doodle instead.",
+      "Don't round prints beyond 3px or add card borders; the white print border is the edge.",
+      "Don't add a new shadow for a new object; use the table shadow."
+    ]
+  }
+}
