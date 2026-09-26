@@ -3,6 +3,8 @@ import type { LatLng } from "@/lib/time"
 // Everything personal lives here. Edit freely; the page reads only this file.
 // Anything in [brackets] or set to null is a placeholder waiting for the real thing.
 
+export type Scene = "sleep" | "coffee" | "work" | "eat" | "phone"
+
 export const us = {
   me: {
     name: "Kiky",
@@ -79,6 +81,28 @@ export const us = {
     },
   ],
 
+  // What I'm probably doing, by WIB hour (0 to 23). Each entry runs until the next one starts.
+  // Scenes: sleep, coffee, work, eat, phone. Lines are starters, make them true.
+  day: [
+    { from: 0, scene: "sleep", line: "Asleep. Probably dreaming about you." },
+    { from: 6, scene: "coffee", line: "Coffee first. Then checking if you texted." },
+    { from: 9, scene: "work", line: "Busy, with you in the back of my head." },
+    { from: 12, scene: "eat", line: "Lunch. Eating properly, like you told me to." },
+    { from: 13, scene: "work", line: "Afternoon grind. Counting down to talking to you." },
+    { from: 18, scene: "phone", line: "Done for the day. Staring at my phone, waiting for you." },
+    { from: 23, scene: "phone", line: "Should be asleep. Would rather be talking to you." },
+  ] as { from: number; scene: Scene; line: string }[],
+
+  // Starter coupons. Redeeming one opens WhatsApp with the coupon in the message.
+  coupons: [
+    { id: "call", title: "One video call, right now", fine: "Valid any hour. Even 2 a.m. Especially 2 a.m." },
+    { id: "right", title: "One \"you were right\"", fine: "Said out loud, fully meant, no \"but\" at the end." },
+    { id: "snack", title: "One snack, on me", fine: "You pick it, I get it delivered to your door in Bireuen." },
+    { id: "sulk", title: "One free sulk", fine: "Sulk as long as you like. I'll wait it out and still be here." },
+    { id: "song", title: "One song, sung by me", fine: "Delivered as a voice note. Off-key is part of the deal." },
+    { id: "plan", title: "One day, planned by you", fine: "Next visit. You make the plan, I show up and say yes." },
+  ],
+
   // Starter lines. Swap in your own, the specific ones always land better.
   reasons: [
     "My day gets lighter the second your name pops up on my screen.",
@@ -123,3 +147,6 @@ export const us = {
   // Used for Amanda's pin on the map.
   avatar: "/photos/amanda-avatar.jpg",
 }
+
+// WhatsApp chat with Kiky, message prefilled. Amanda can still edit it before sending.
+export const waLink = (text: string) => `https://wa.me/${us.me.whatsapp}?text=${encodeURIComponent(text)}`

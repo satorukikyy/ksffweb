@@ -28,6 +28,7 @@ Made for two specific people in two specific cities. Everything personal (names,
 - Affectionate but not over the top ("ga over"): cute, polished, modern.
 - Inferred (user skipped the question round, confirm later): voice is first person, from the owner to the partner; all four areas wanted ("lengkap"): time zones + countdown, open-when letters, memories timeline, small playful bits.
 - Private page: should not be indexed by search engines.
+- Owner-editable in lib/us.ts: letters, reasons, coupons, and `day` (what Kiky is probably doing at each WIB hour). Coupon and day lines are starters until the owner makes them true.
 
 ## Evidence on Hand
 
@@ -40,4 +41,4 @@ Made for two specific people in two specific cities. Everything personal (names,
 1. Sweet, never syrupy: one warm line beats five hearts.
 2. Personal over generic: every real detail comes from the owner.
 3. Made for a phone in one hand at night.
-4. Quiet delight: small moments of play, nothing that performs.
+4. Quiet delight: small moments of play, nothing that performs. The stick figures are the exception the owner asked for (2026-09-26, "makin lucu gemes"): openly cute, but always drawn by the same pen and always answering something Amanda did or the real clock.

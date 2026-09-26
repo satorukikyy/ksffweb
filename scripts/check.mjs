@@ -1,6 +1,6 @@
 // node scripts/check.mjs — sanity check for lib/time.ts
 import assert from "node:assert/strict"
-import { clock, countdown, cumulativeKm, kmBetween, moodFor, stamp, sunLagMinutes } from "../lib/time.ts"
+import { atHour, clock, countdown, cumulativeKm, kmBetween, moodFor, stamp, sunLagMinutes } from "../lib/time.ts"
 import { ROAD_KM, ROUTE } from "../lib/route.ts"
 
 const depok = [-6.4, 106.8186]
@@ -15,6 +15,12 @@ assert.deepEqual(clock(now, "Asia/Jakarta"), { hour: 22, text: "22:41" })
 assert.equal(stamp(now, "Asia/Jakarta"), "24.09.26")
 assert.equal(moodFor(22), "We should both be sleeping. Call?")
 assert.equal(moodFor(0), "Way past bedtime, for both of us.")
+
+const day = [{ from: 6, s: "coffee" }, { from: 12, s: "eat" }, { from: 23, s: "late" }]
+assert.equal(atHour(day, 6).s, "coffee")
+assert.equal(atHour(day, 11).s, "coffee")
+assert.equal(atHour(day, 23).s, "late")
+assert.equal(atHour(day, 2).s, "late", "before the first entry, last night's entry is still on")
 
 assert.deepEqual(countdown("2026-09-26", now), { done: false, days: 1, hours: 1, minutes: 19 })
 assert.equal(countdown("2026-01-01", now).done, true)

@@ -230,6 +230,29 @@
     background: oklch(0.95 0.03 80 / 0.55);
     box-shadow: 0 1px 2px oklch(0.2 0.1 18 / 0.2);
   }
+
+  /* Stick figures keep the kiosk-pen weight at any size. */
+  .stickman :is(path, line, circle, rect, ellipse) {
+    vector-effect: non-scaling-stroke;
+  }
+
+  /* Booth ticket: a stub, a perforation, and two notches punched where they meet. */
+  .ticket {
+    --stub: 3.5rem;
+    mask:
+      radial-gradient(circle 9px at var(--stub) 0, #0000 96%, #000) top / 100% 51% no-repeat,
+      radial-gradient(circle 9px at var(--stub) 100%, #0000 96%, #000) bottom / 100% 51% no-repeat;
+  }
+  @media (min-width: 640px) {
+    .ticket {
+      --stub: 4rem;
+    }
+  }
+
+  /* The table shadow, as a filter, for shapes a box-shadow can't follow (masked tickets). */
+  .drop-table {
+    filter: drop-shadow(0 16px 14px oklch(0.2 0.1 18 / 0.5)) drop-shadow(0 3px 3px oklch(0.2 0.1 18 / 0.3));
+  }
 }
 
 @keyframes develop {

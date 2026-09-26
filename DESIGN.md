@@ -124,6 +124,8 @@ The site is a Life4Cuts-style booth print lying on a cherry table. The ground is
 
 It is read on a phone at the edges of the day, so the page is one column of physical objects, slightly tilted, each casting the same table shadow. Motion is photographic: frames develop from a white flash, reasons resolve out of blur, the map draws the real road. Nothing floats, sparkles or pulses for decoration.
 
+The kiosk pen also draws the two of us: stick figures of Kiky and Amanda (her in a hijab and long dress) that live in the photo windows and on the table edge. They are the one place the page is openly silly, at the owner's request (2026-09-26, "makin lucu gemes"): they run, hug, wave, sulk and sit with their legs over the footer. They carry the play so the rest of the page can stay quiet.
+
 **Key Characteristics:**
 - Drenched cherry red ground; charcoal photo windows with film grain; orange date-imprint digits with a faint glow.
 - Two faces only: Bricolage Grotesque (booth logo, headings, UI) and Nanum Pen Script (the pen).
@@ -171,7 +173,7 @@ One hot ground, one neutral photo charcoal, one orange imprint accent, and paper
 - **Lede** (400, 1.125rem, relaxed, max 40ch, frame-soft): one or two sentences under each heading.
 - **Body** (400, 0.875rem to 1.05rem): frame captions at 0.875rem; letter paragraphs at 1.05rem relaxed.
 - **Unit label** (600, 0.75rem, 0.12em tracking, uppercase, window-muted): only the unit beside a SevenSeg readout (km, days, WIB) and the "opened" state stamp.
-- **Pen** (400, 1.65rem to 2.6rem, line-height 0.9 to 1): frame captions ("right now", "between us"), letter titles, photo titles, hints ("tap a pin"). **Pen display** (clamp(3.25rem, 9vw, 6rem), 0.85): the footer sign-off.
+- **Pen** (400, 1.65rem to 2.6rem, line-height 0.9 to 1): frame captions ("right now", "between us"), letter titles, photo titles, coupon titles, hints ("tap a pin"). **Pen label** (1.4rem): the "me", "you", "us" names under the stick figures. **Pen display** (clamp(3.25rem, 9vw, 6rem), 0.85): the footer sign-off.
 
 ### Named Rules
 **The Pen Speaks Rule.** Nanum Pen Script is for what Kiky would write by hand on the print: captions, titles of letters and photos, hints, sign-offs. It never carries body copy, buttons or numbers.
@@ -183,7 +185,11 @@ A single centered column capped at 72rem, gutters 16px (24px from sm). Sections 
 - **Hero:** stacked on mobile; from lg a 1.35fr / 1fr grid with the headline left and lede plus actions right, bottom-aligned.
 - **Photo strip:** vertical on mobile (max 23rem wide, frames 3:2, tilted +0.8deg); horizontal from lg (frames square, strip tilted -1.2deg, a vertical-text logo end cap).
 - **Split sections (map, reasons):** stacked on mobile; from lg an asymmetric text-left grid (1fr / 2fr map, 1fr / 1.6fr reasons); the map intro sticks at top 40px.
+- **Section order:** hero strip, Meanwhile, map, Hug, letters, reasons, coupons, roll, footer.
+- **Meanwhile:** one taped print; from lg a 1.45fr / 1fr grid with the print left and text right (the mirror of the map).
+- **Hug:** heading block, then one full-width print (window 4:3.4 mobile, 16:9 sm, 21:9 lg), then the hold pill.
 - **Letters:** 2 columns on mobile, 3 from md; sleeves 4:5, 5:4 from lg.
+- **Coupons:** 1 column, 2 from md with every second ticket dropped 32px so the pile reads as tossed on the table.
 - **Roll:** 1 column, 2 from sm, 3 from lg; prints max 20rem, 9:16 windows, 56px row gap to leave room for tape.
 - **Sticky WhatsApp bar:** mobile only (hidden from md), full-width pill over a frame-to-transparent scrim, bottom padding respects the safe-area inset. From md the same action sits in the hero (secondary) and footer (primary).
 - Header nav is hidden below md; the K+A logo is the only mobile chrome.
@@ -196,6 +202,7 @@ Depth is physical, not interface: prints, sleeves and paper lie on a table. Ther
 - **Table** (`0 22px 40px -18px oklch(0.2 0.1 18 / 0.7), 0 3px 8px oklch(0.2 0.1 18 / 0.35)`): every print frame, sleeve, strip and map frame.
 - **Held paper** (`0 30px 80px -20px oklch(0.1 0.05 18 / 0.7)`): the open letter dialog only.
 - **Tape** (`0 1px 2px oklch(0.2 0.1 18 / 0.2)`): tape strips.
+- **Table, as a filter** (`.drop-table`): the same table shadow as two drop-shadows, only for shapes a box-shadow cannot follow (the notched coupon tickets).
 - **Stamp glow** (`drop-shadow(0 0 5px oklch(0.78 0.165 60 / 0.55))`): seven-segment digits on charcoal.
 
 ### Named Rules
@@ -244,6 +251,24 @@ MapLibre inside a print frame (4:5 mobile, 16:11 sm, 16:10 lg). Camera fits both
 ### Doodles
 Authored SVGs with one stroke (2.4, round caps and joins, currentColor): heart, arrow, squiggle, spark. White on red and charcoal, frame red on paper, stamp orange for the hero squiggle.
 
+### Stick Figures (components/stickman.tsx)
+Kiky and Amanda drawn with the same pen: one stroke, round caps, `vector-effect: non-scaling-stroke` (the `.stickman` class) so the line stays 2.4px (2.8 in the hug window) at any size. Kiky has a round head and three spiky hairs; Amanda has a hijab that drapes to the shoulders and an A-line dress, both at 14% currentColor fill. Faces are two dots and a line: smile, happy (closed eyes, open mouth), pout, sleep, o; blush is two pairs of pen hatch marks.
+- **Rig:** 60x100 grid, joints at shoulder, elbow, hip, knee and neck. Poses are rotation angles in `POSES`; directional poses face right and `mirror()` turns them. Motion pivots need `originX`/`originY` in px with `transformBox: view-box` (a `transformOrigin` style is overwritten).
+- **Motion:** pose changes spring (visualDuration 0.45, bounce 0.35); array angles loop, only while the figure is on screen and never under reduced motion. Eyes blink every ~3.4s.
+- **Props** ride in the hands (mug, spoon, phone) or sit in the scene sheet (chair, desk, laptop, bed, moon, sun).
+
+### Hug Window
+A print whose window is a stage: the two figures stand at 22% and 78% on a dotted road at their feet line (85% of their height). Holding the flash pill (1.8s, pointer or Space/Enter; a screen-reader click runs it whole) walks them in by `--reach` per breakpoint while the SevenSeg km counts down from ROAD_KM. Release early and they pout and walk back ("don't let go!"). Arrival: hug pose, Amanda's foot pops, both blush, one stamp-orange heart springs in, names become "us", the hugs-sent counter (localStorage) ticks. The pill fills with frame red at 20% as progress; "Tell Kiky" (ghost) appears after the first hug.
+
+### Meanwhile Print
+A taped print whose window shows Kiky's likely activity for the current WIB hour (`us.day`, picked by `atHour`): sleep, coffee, work, eat, phone. A 150x96 scene sheet, pen caption "me, right now", SevenSeg clock, and the owner's line as the caption. Before the clock is known he waves and the caption reads "Checking the clock…".
+
+### Booth Ticket (coupons)
+Photo paper with `.on-paper`, a 3.5rem stub (4rem from sm) holding a vertical pen "coupon" and a frame-red SevenSeg number, a dashed perforation, and two 9px notches punched by a CSS mask where they meet. Pen title, ink-soft fine print, ink pill "Redeem" that opens WhatsApp with the coupon. Once redeemed, a frame-red rubber stamp ("Redeemed" plus SevenSeg date, multiply) thunks in and the pill becomes "Use it again".
+
+### Cameos
+The header logo pops a waving Kiky with "hi, you" on tap. Kiky and Amanda sit on the footer's top edge, legs swinging, his arm around her; he waves the first time they scroll in, and tapping them (a real button, "Boop us") makes both jump under one heart. The 404 has Kiky turning a paper map around under a pen question mark.
+
 ## Do's and Don'ts
 
 ### Do:
@@ -256,7 +281,7 @@ Authored SVGs with one stroke (2.4, round caps and joins, currentColor): heart, 
 
 ### Don't:
 - **Don't** use a pink or pastel ground; blush exists only as text on red.
-- **Don't** animate hearts or scatter them as particles; the heart is a static pen doodle placed once per object.
+- **Don't** scatter hearts as particles or float them as ambient decoration. A single heart may pop in response to something Amanda did (a finished hug, a boop, Kiky's phone lighting up); otherwise the heart is a static pen doodle placed once per object.
 - **Don't** use gradient text, or backdrop-filter glass on any surface. Blur is optical only: the glassine peek and the develop and resolve transitions.
 - **Don't** set display numbers in a text face or add a monospace font.
 - **Don't** use lucide icons outside buttons, or emoji and glyphs as icons; draw a doodle instead.

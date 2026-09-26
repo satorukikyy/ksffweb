@@ -41,6 +41,12 @@ export function moodFor(hour: number) {
   return "We should both be sleeping. Call?"
 }
 
+// The entry that has started by this hour, in a list sorted by `from`. Before the first one, the
+// day's last entry is still running from the night before.
+export function atHour<T extends { from: number }>(list: readonly T[], hour: number): T {
+  return list.findLast((d) => d.from <= hour) ?? list[list.length - 1]
+}
+
 export function countdown(isoDay: string, now: Date) {
   const ms = Math.max(0, wibDate(isoDay).getTime() - now.getTime())
   return {

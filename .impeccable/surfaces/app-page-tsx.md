@@ -26,7 +26,11 @@ Signature interaction: the strip developing live on load (flash, then each frame
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
+Added 2026-09-26 at the owner's request ("lebih lengkap, makin lucu gemes, stickman bucin"): pen stick figures of both of us. New sections: Meanwhile (live doodle of Kiky by WIB hour), Hug (hold to walk them together, km counts down to 0), Coupons (booth tickets that redeem over WhatsApp). Cameos in the header logo, on the footer edge, and on the 404.
+
 ## Deliberate calls
+- Stick figures are allowed to be silly; everything else stays quiet. One heart per completed action, never particles.
+- Amanda's figure wears a hijab (owner confirmed, matching her photos).
 - Amanda's photos in the roll stay in colour, not B&W windows: they are the real her, and the one place her colour shows. (Finish review 2026-09-25 flagged the material mismatch; kept on purpose.)
 - Photo dates are not set; the orange imprint only renders when the owner adds real dates.
 
